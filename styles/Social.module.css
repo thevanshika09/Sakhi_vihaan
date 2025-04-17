@@ -1,0 +1,133 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  position: relative;
+  padding-bottom: 70px; /* Space for bottom navigation */
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.socialHeader {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.socialHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.socialHeader p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.socialActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.createPostButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.createPostButton:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.icon {
+  font-size: 1.25rem;
+}
+
+.filterOptions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filterButton {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.filterButton.active {
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+  border-color: var(--primary-color-light);
+}
+
+.postsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.loginPrompt {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.loginPrompt p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.loginButton {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.loginButton:hover {
+  background-color: var(--primary-color-dark);
+}
+
+@media (max-width: 640px) {
+  .socialActions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .filterOptions {
+    justify-content: center;
+  }
+}

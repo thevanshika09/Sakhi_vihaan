@@ -1,0 +1,383 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  position: relative;
+  padding-bottom: 70px; /* Space for bottom navigation */
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.verificationHeader {
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.verificationHeader h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.verificationHeader p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.verificationInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.infoCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stampIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--safe-color);
+}
+
+.infoCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.infoCard p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.applyButton {
+  display: inline-block;
+  padding: 0.875rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.applyButton:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.benefitsList {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefitsList h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.benefitsList ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitsList li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.benefitsList li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--safe-color);
+  font-weight: bold;
+}
+
+.verificationForm {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.verificationForm h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 0.875rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cancelButton,
+.submitButton {
+  flex: 1;
+  padding: 0.875rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.submitButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.submitButton:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.submitButton:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.successMessage {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.successIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.successMessage h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.successMessage p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.verifiedSellers {
+  margin-bottom: 2rem;
+}
+
+.verifiedSellers h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sellersList {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.sellerCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sellerInfo {
+  flex: 1;
+}
+
+.sellerNameWithBadge {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.sellerNameWithBadge h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.verifiedBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--safe-color);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+.sellerType {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.sellerStats {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.emptyState {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.loginRequired {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.lockIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.loginRequired h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.loginRequired p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.loginButton {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.loginButton:hover {
+  background-color: var(--primary-color-dark);
+}
+
+@media (max-width: 640px) {
+  .verificationInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .verificationForm {
+    padding: 1.5rem;
+  }
+
+  .infoCard,
+  .benefitsList {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .sellersList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

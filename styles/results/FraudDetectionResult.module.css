@@ -1,0 +1,160 @@
+.resultCard {
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resultCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.fraudResult {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 2px solid #ef4444;
+}
+
+.suspiciousResult {
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 2px solid #f59e0b;
+}
+
+.safeResult {
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 2px solid #10b981;
+}
+
+.resultHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.resultIcon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.fraudResult .resultIcon,
+.suspiciousResult .resultIcon {
+  animation: pulse 2s infinite;
+}
+
+.resultTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.fraudResult .resultTitle {
+  color: #ef4444;
+}
+
+.suspiciousResult .resultTitle {
+  color: #f59e0b;
+}
+
+.safeResult .resultTitle {
+  color: #10b981;
+}
+
+.resultDetails {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.resultDetails p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.resultActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.detailsButton {
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fraudResult .detailsButton {
+  color: #ef4444;
+}
+
+.suspiciousResult .detailsButton {
+  color: #f59e0b;
+}
+
+.safeResult .detailsButton {
+  color: #10b981;
+}
+
+.detailsButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.actionButton {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fraudResult .actionButton {
+  background-color: #ef4444;
+  color: white;
+}
+
+.suspiciousResult .actionButton {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.safeResult .actionButton {
+  background-color: #10b981;
+  color: white;
+}
+
+.actionButton:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .resultCard {
+    padding: 1rem;
+  }
+
+  .resultActions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .detailsButton,
+  .actionButton {
+    width: 100%;
+  }
+}

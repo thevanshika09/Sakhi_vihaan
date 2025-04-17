@@ -1,0 +1,87 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  background-color: var(--hover-bg);
+}
+
+.iconContainer {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.green .iconContainer {
+  background-color: var(--safe-color-bg);
+}
+
+.purple .iconContainer {
+  background-color: var(--purple-color-bg);
+}
+
+.blue .iconContainer {
+  background-color: var(--secondary-color-bg);
+}
+
+.orange .iconContainer {
+  background-color: var(--warning-color-bg);
+}
+
+.icon {
+  font-size: 1.75rem;
+}
+
+.green .icon {
+  color: var(--safe-color);
+}
+
+.purple .icon {
+  color: var(--purple-color);
+}
+
+.blue .icon {
+  color: var(--secondary-color);
+}
+
+.orange .icon {
+  color: var(--warning-color);
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.25rem;
+  }
+
+  .iconContainer {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 0.8125rem;
+  }
+}

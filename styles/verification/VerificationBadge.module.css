@@ -1,0 +1,28 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.small {
+  width: 16px;
+  height: 16px;
+}
+
+.medium {
+  width: 20px;
+  height: 20px;
+}
+
+.large {
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  width: 75%;
+  height: 75%;
+}

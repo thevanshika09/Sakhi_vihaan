@@ -1,0 +1,104 @@
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.robot2D {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  animation: float 3s ease-in-out infinite;
+}
+
+.robot3D {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.loadingText {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-family: monospace;
+  letter-spacing: 2px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.soundToggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.soundToggle:hover {
+  opacity: 1;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .robot2D,
+  .robot3D {
+    width: 150px;
+    height: 150px;
+  }
+
+  .loadingText {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,260 @@
+.main {
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--background);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--card-background);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--card-background);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tab.active {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.scanArea {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.qrScanner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scannerFrame {
+  width: 80%;
+  height: 80%;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  position: relative;
+}
+
+.scannerFrame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+  animation: scan 2s linear infinite;
+}
+
+.upiForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.upiInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: var(--card-background);
+  color: var(--text-primary);
+  transition: all 0.2s;
+}
+
+.upiInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+}
+
+.upiHint {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.analyzing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  animation: slideUp 0.3s ease-out;
+}
+
+.result.safe {
+  background: var(--safe-color-bg);
+  border: 1px solid var(--safe-color);
+}
+
+.result.suspicious {
+  background: var(--warning-color-bg);
+  border: 1px solid var(--warning-color);
+}
+
+.result.scam {
+  background: var(--danger-color-bg);
+  border: 1px solid var(--danger-color);
+}
+
+.resultIcon {
+  font-size: 2rem;
+}
+
+.resultContent h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.resultContent p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.resultDetails {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.resultDetails code {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: var(--card-background);
+  border-radius: 0.5rem;
+  font-family: monospace;
+  word-break: break-all;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(100% - 2px));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .scanArea {
+    aspect-ratio: 3/4;
+  }
+} 

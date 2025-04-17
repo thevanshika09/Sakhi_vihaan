@@ -1,0 +1,374 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  position: relative;
+  padding-bottom: 70px; /* Space for bottom navigation */
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.referralHeader {
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.referralHeader h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.referralHeader p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.referralCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.referralStats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.statItem {
+  text-align: center;
+  flex: 1;
+}
+
+.statValue {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.referralCode {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.referralCode p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.codeDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--hover-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.codeDisplay span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.copyButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.copyButton:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.shareOptions {
+  text-align: center;
+  position: relative;
+}
+
+.shareButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+}
+
+.shareButton:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+.shareMenu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.75rem;
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.shareOption {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.shareOption:hover {
+  background-color: var(--hover-bg);
+}
+
+.shareIcon {
+  font-size: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.referralHistory {
+  margin-bottom: 2rem;
+}
+
+.referralHistory h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.referralTable {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background-color: var(--card-bg-dark);
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.tableBody {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.tableCell {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.pending {
+  color: var(--text-secondary);
+}
+
+.joined {
+  color: var(--warning-color);
+}
+
+.completed {
+  color: var(--safe-color);
+}
+
+.emptyState {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.referralFaq {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+.referralFaq h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.faqItem {
+  margin-bottom: 1.5rem;
+  padding-left: 3rem;
+  position: relative;
+}
+
+.faqItem:last-child {
+  margin-bottom: 0;
+}
+
+.faqItem h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.faqItem p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.faqItem:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(16, 185, 129, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.faqItem:nth-child(1):before {
+  content: "1";
+}
+
+.faqItem:nth-child(2):before {
+  content: "2";
+}
+
+.faqItem:nth-child(3):before {
+  content: "3";
+}
+
+.loginRequired {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.lockIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.loginRequired h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.loginRequired p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.loginButton {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.loginButton:hover {
+  background-color: var(--primary-color-dark);
+}
+
+@media (max-width: 640px) {
+  .referralCard {
+    padding: 1.5rem;
+  }
+
+  .referralStats {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .statItem {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+
+  .tableHeader,
+  .tableRow {
+    grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
+  }
+
+  .referralFaq {
+    padding: 1.5rem;
+  }
+}

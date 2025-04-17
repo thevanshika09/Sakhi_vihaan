@@ -1,0 +1,181 @@
+.resultContainer {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.resultContainer.safe {
+  border: 2px solid var(--safe-color);
+}
+
+.resultContainer.warning {
+  border: 2px solid var(--warning-color);
+}
+
+.resultContainer.danger {
+  border: 2px solid var(--danger-color);
+}
+
+.resultHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.resultIcon {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.safe .resultIcon {
+  color: var(--safe-color);
+}
+
+.warning .resultIcon {
+  color: var(--warning-color);
+}
+
+.danger .resultIcon {
+  color: var(--danger-color);
+}
+
+.resultTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.safe .resultTitle {
+  color: var(--safe-color);
+}
+
+.warning .resultTitle {
+  color: var(--warning-color);
+}
+
+.danger .resultTitle {
+  color: var(--danger-color);
+}
+
+.resultMessage {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+.resultDetails {
+  margin-bottom: 1.5rem;
+}
+
+.detailsCard {
+  background-color: var(--hover-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.detailsHeader {
+  background-color: var(--card-bg-dark);
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+}
+
+.detailsContent {
+  padding: 1rem;
+}
+
+.detailRow {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.detailRow:last-child {
+  margin-bottom: 0;
+}
+
+.detailLabel {
+  width: 120px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.detailValue {
+  flex: 1;
+}
+
+.resultActions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.shareButton {
+  flex: 1;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.scanAgainButton {
+  flex: 1;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.reportSection {
+  text-align: center;
+  background-color: var(--danger-color-bg);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.reportSection p {
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.reportButton {
+  display: inline-block;
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .resultContainer {
+    padding: 1rem;
+  }
+
+  .resultIcon {
+    font-size: 2.5rem;
+  }
+
+  .resultTitle {
+    font-size: 1.25rem;
+  }
+
+  .resultMessage {
+    font-size: 1rem;
+  }
+
+  .detailLabel {
+    width: 100px;
+  }
+}

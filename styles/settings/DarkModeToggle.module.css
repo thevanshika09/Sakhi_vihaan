@@ -1,0 +1,75 @@
+.toggleButton {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.toggleButton:hover {
+  background-color: var(--hover-bg);
+}
+
+.dark {
+  color: var(--text-color);
+}
+
+.light {
+  color: var(--text-color);
+}
+
+.toggleTrack {
+  width: 48px;
+  height: 24px;
+  background-color: var(--card-bg-dark);
+  border-radius: 12px;
+  padding: 2px;
+  position: relative;
+  margin-right: 0.75rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggleThumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.dark .toggleThumb {
+  background-color: #6366f1;
+}
+
+.light .toggleThumb {
+  background-color: #f59e0b;
+}
+
+.moonIcon,
+.sunIcon {
+  line-height: 1;
+}
+
+.toggleLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .toggleLabel {
+    display: none;
+  }
+
+  .toggleButton {
+    padding: 0.25rem;
+  }
+
+  .toggleTrack {
+    margin-right: 0;
+  }
+}

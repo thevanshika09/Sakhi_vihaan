@@ -1,0 +1,68 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1e293b;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+}
+
+.tryNow {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tryNow:hover {
+  background-color: #059669;
+}
+
+@media (max-width: 600px) {
+  .banner {
+    padding: 0.75rem;
+  }
+
+  .logo h1 {
+    font-size: 1.25rem;
+  }
+
+  .themeToggle {
+    display: none;
+  }
+}

@@ -1,0 +1,236 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  position: relative;
+  padding-bottom: 70px; /* Space for bottom navigation */
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.reportHeader {
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.reportHeader h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.reportHeader p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.reportForm {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.formGroup select,
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.875rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formGroup select:focus,
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+}
+
+.fileUpload {
+  position: relative;
+}
+
+.fileUpload input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.uploadLabel {
+  display: block;
+  padding: 0.875rem;
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-secondary);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.uploadLabel:hover {
+  border-color: var(--primary-color);
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.formActions {
+  margin-top: 2rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.submitButton:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.submitButton:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.formNote {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(16, 185, 129, 0.05);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  border-left: 3px solid var(--primary-color);
+}
+
+.successMessage {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.successIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.successMessage h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.successMessage p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.coinReward {
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(16, 185, 129, 0.1);
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.viewAlertsSection {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+.viewAlertsSection h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.viewAlertsSection p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.viewAlertsButton {
+  display: inline-block;
+  padding: 0.875rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+}
+
+.viewAlertsButton:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+@media (max-width: 640px) {
+  .reportForm {
+    padding: 1.5rem;
+  }
+
+  .viewAlertsSection {
+    padding: 1.5rem;
+  }
+}

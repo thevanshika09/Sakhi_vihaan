@@ -1,0 +1,68 @@
+.activity {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.statusBadge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.safe {
+  background-color: var(--safe-color-bg);
+  color: var(--safe-color);
+}
+
+.warning {
+  background-color: var(--warning-color-bg);
+  color: var(--warning-color);
+}
+
+.danger {
+  background-color: var(--danger-color-bg);
+  color: var(--danger-color);
+}
+
+.details {
+  flex: 1;
+}
+
+.title {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.time {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .activity {
+    padding: 0.75rem;
+  }
+
+  .statusBadge {
+    width: 36px;
+    height: 36px;
+    margin-right: 0.75rem;
+  }
+
+  .title {
+    font-size: 0.9375rem;
+  }
+
+  .time {
+    font-size: 0.8125rem;
+  }
+}

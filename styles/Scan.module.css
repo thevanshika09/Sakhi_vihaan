@@ -1,0 +1,261 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  position: relative;
+  padding-bottom: 70px; /* Space for bottom navigation */
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.scanHeader {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.scanHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.scanHeader p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.scanTypes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.scanTypeButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.scanTypeButton.active {
+  background-color: var(--primary-color-light);
+  border-color: var(--primary-color);
+}
+
+.scanTypeIcon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.scanInput {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.qrInstructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.qrIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.textInputContainer {
+  margin-bottom: 1.5rem;
+}
+
+.textInputContainer label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.textInputContainer input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.startScanButton {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.scanningContainer {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cameraContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.cameraFeed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scanOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scanFrame {
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.5);
+}
+
+.processingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.inputPreview {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.scanTips {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.scanTips h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.tipsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tipsList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.tipsList li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+@media (max-width: 640px) {
+  .scanTypes {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .scanTypeButton {
+    padding: 0.5rem;
+  }
+
+  .scanTypeIcon {
+    font-size: 1.25rem;
+  }
+
+  .cameraContainer {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scanTypes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

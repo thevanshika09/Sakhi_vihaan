@@ -1,0 +1,113 @@
+.loadingContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loadingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.robotContainer {
+  margin-bottom: 2rem;
+}
+
+.loadingInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loadingTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.loadingSubtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin: 0 0 2rem;
+}
+
+.progressContainer {
+  width: 300px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 3px;
+  transition: width 0.3s ease-out;
+}
+
+.loadingText {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  display: flex;
+}
+
+.dot1,
+.dot2,
+.dot3 {
+  animation: dotAnimation 1.5s infinite;
+  opacity: 0;
+}
+
+.dot1 {
+  animation-delay: 0s;
+}
+
+.dot2 {
+  animation-delay: 0.5s;
+}
+
+.dot3 {
+  animation-delay: 1s;
+}
+
+@keyframes dotAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .progressContainer {
+    width: 250px;
+  }
+
+  .loadingTitle {
+    font-size: 2rem;
+  }
+
+  .loadingSubtitle {
+    font-size: 1rem;
+  }
+}

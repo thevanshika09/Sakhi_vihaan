@@ -1,0 +1,78 @@
+.navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0f172a;
+  border-top: 1px solid #334155;
+  height: 70px;
+  z-index: 10;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.navItem.active {
+  color: #10b981;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.label {
+  font-size: 0.75rem;
+}
+
+.scanItem {
+  position: relative;
+  margin-top: -20px;
+}
+
+.scanButton {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.scanItem .icon {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+}
+
+.scanItem.active .scanButton {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+@media (max-width: 360px) {
+  .label {
+    font-size: 0.7rem;
+  }
+
+  .scanButton {
+    width: 48px;
+    height: 48px;
+  }
+
+  .scanItem {
+    margin-top: -15px;
+  }
+}

@@ -1,0 +1,260 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  position: relative;
+  padding-bottom: 70px; /* Space for bottom navigation */
+}
+
+.authContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+}
+
+.authCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.authHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.authHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.authHeader p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.socialAuth {
+  margin-bottom: 1.5rem;
+}
+
+.authTabs {
+  display: flex;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.authTab {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.authTab.active {
+  color: var(--primary-color);
+}
+
+.authTab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.authForm {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.875rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+}
+
+.otpContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.otpContainer input {
+  flex: 1;
+}
+
+.resendButton {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0 0.5rem;
+}
+
+.otpMessage {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.errorMessage {
+  color: var(--danger-color);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: var(--danger-color-bg);
+  border-radius: 4px;
+}
+
+.primaryButton {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.primaryButton:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
+}
+
+.authDivider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.authDivider::before,
+.authDivider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.authDivider span {
+  padding: 0 1rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.guestButton {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.guestButton:hover {
+  background-color: var(--hover-bg);
+}
+
+.authFooter {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.authFooter a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.authFooter a:hover {
+  text-decoration: underline;
+}
+
+.termsCheckbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.termsCheckbox input {
+  margin-top: 0.25rem;
+}
+
+.termsCheckbox label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.termsCheckbox a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.termsCheckbox a:hover {
+  text-decoration: underline;
+}
+
+.referralNote {
+  font-size: 0.75rem;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .authCard {
+    padding: 1.5rem;
+  }
+
+  .authHeader h2 {
+    font-size: 1.25rem;
+  }
+}
